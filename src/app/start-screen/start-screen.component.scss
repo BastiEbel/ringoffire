@@ -1,4 +1,4 @@
-.start-screen{
+.start-screen {
     background-color: #404040;
     width: 100vw;
     height: 100vh;
@@ -7,7 +7,26 @@
     justify-content: center;
     align-items: center;
 
-    img{
+    img {
         height: 100vh;
+    }
+}
+
+.start-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    bottom: 80px;
+    
+    img {
+        height: auto;
+        width: 30vw;
+
+        &:hover{
+            filter: brightness(1.25);
+            cursor: pointer;
+        }
     }
 }
