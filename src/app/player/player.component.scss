@@ -8,11 +8,15 @@
         font-size: 32px;
         margin-left: 16px;
     }
-    background-color: rgb(255, 182, 47);
+    background-color: rgb(50, 50, 50, 0.8);
     img {
-        height: 100px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+.player-active{
+    background-color: rgb(255, 182, 47) !important;
 }
