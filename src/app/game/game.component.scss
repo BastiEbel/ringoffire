@@ -26,8 +26,13 @@
     }
 }
 
+.played-card {
+    right: 25px;
+    transform: scale(1.2) translateX(140px) translateY(-180px) rotate(-10deg);
+}
+
 .pick-card{
-    transform: scale(1.2) translateX(120px) translateY(-180px) rotate(-10deg);
+    transform: scale(1.2) translateX(140px) translateY(-180px) rotate(-10deg);
     animation: pick-card-animation 1s ease-in-out;
 }
 
