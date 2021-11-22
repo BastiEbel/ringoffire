@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  
+
   game: Game;
   gameId: string;
 
@@ -39,17 +39,18 @@ export class GameComponent implements OnInit {
 
   newGame() {
     this.game = new Game();
-    
+
   }
 
   takeCard() {
     if (!this.game.pickCardAnimation) {
       this.game.currentCard = this.game.stack.pop();
-      this.saveGame();
       this.game.pickCardAnimation = true;
-
       this.game.currentplayer++;
       this.game.currentplayer = this.game.currentplayer % this.game.players.length;
+
+      this.saveGame();
+
       setTimeout(() => {
         this.game.playedCards.push(this.game.currentCard);
         this.game.pickCardAnimation = false;
@@ -70,10 +71,10 @@ export class GameComponent implements OnInit {
     });
   }
 
-  saveGame(){
+  saveGame() {
     this.firestore
-        .collection('games')
-        .doc(this.gameId)
-        .update(this.game.toJson());
+      .collection('games')
+      .doc(this.gameId)
+      .update(this.game.toJson());
   }
 }
