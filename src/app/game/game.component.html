@@ -8,22 +8,22 @@
 </div>
 
 <div *ngIf="gameOver" class="gameOver">
-    <img src="./assets/img/3.Game_over.png">
+    <img src="/assets/img/3.Game_over.png">
 </div>
 
-<div *ngIf="!gameOver" class="field" style="background-image: url('./assets/img/board.jpg');">
+<div *ngIf="!gameOver" class="field" style="background-image: url('/assets/img/board.jpg');">
     <div class="card-stack">
 
         <img [ngStyle]="{'right.px': i * 6}" *ngFor="let c of [0,1,2,3,4]; let i = index;"
-            src="assets/img/cards/blue_back.png">
+            src="/assets/img/cards/blue_back.png">
 
-        <img (click)="takeCard()" class="top-card" style="right: 25px;" src="./assets/img/cards/blue_back.png">
+        <img (click)="takeCard()" class="top-card" style="right: 25px;" src="/assets/img/cards/blue_back.png">
 
-        <img *ngFor="let card of game.playedCards" class="played-card" src="./assets/img/cards/{{ card }}.png">
+        <img *ngFor="let card of game.playedCards" class="played-card" src="/assets/img/cards/{{ card }}.png">
 
 
         <img (click)="takeCard()" *ngIf="game.pickCardAnimation" class="pick-card" style="right: 25px;"
-            src="./assets/img/cards/{{ game.currentCard }}.png">
+            src="/assets/img/cards/{{ game.currentCard }}.png">
     </div>
 </div>
 
@@ -33,4 +33,4 @@
     <mat-icon>add</mat-icon>
 </button>
 
-<img class="preloadImage" src="./assets/img/cards/{{ game.stack[game.stack.length -1]}}.png">
+<img class="preloadImage" src="/assets/img/cards/{{ game.stack[game.stack.length -1]}}.png">
